@@ -95,4 +95,10 @@ Here's a [link to my video result](./OUT.mp4)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+Although my current implementation works quite well on the given test video, it does not perform as well on the two challenging videos.  The reason is because these challenging videos contain more dynamics (light, traffic, tighter curves, etc.).  There are at least a couple of ways to improve the current implementation.
+
+1.  Fine tuning:
+2.  Sanity Check:
+
+
+
