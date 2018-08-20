@@ -97,8 +97,11 @@ Here's a [link to my video result](./OUT.mp4)
 
 Although my current implementation works quite well on the given test video, it does not perform as well on the two challenging videos.  The reason is because these challenging videos contain more dynamics (light, traffic, tighter curves, etc.).  There are at least a couple of ways to improve the current implementation.
 
-1.  Fine tuning:
-2.  Sanity Check:
+1.  Fine tuning:  There are many knobs that can be tuned to improve performance.  The major ones are the min / max thresholds for thresholding images in color space and gradients.
+
+2.  Sanity Check:  Current implementation stores past 15 polynomial coefficients for left / right lane lines and averages them to calculate the radius of curvature.  One way to improve this is to do sanity check on the incoming coefficents and discard if they deviate too much from the past.  Even better wasy would be to weigh the coefficients differently based on some factors, such as number of pixels used to calculate the coefficients.
+
+3.  Curve fitting with outlier detection:  When fitting a polynomial on the lane-line pixels, a smarter curve fitting could be used to reject outlier pixels.  RANSAC is a good algorithm to use in this case.
 
 
 
